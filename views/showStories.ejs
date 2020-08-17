@@ -1,0 +1,25 @@
+<h1>SHOW ALL USERS!</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <% for (let i = 0; i < 6; i++) { %>
+        <th><%=data[0][i]%></th>
+        <%}%>
+    </tr>
+    </thead>
+
+
+    <% for (let i = 1; i < data.length-1; i++) { %>
+        <tr>
+            <td><%= i %></td>
+            <% for (let j = 0; j < 6; j++) { %>
+            <td><%= data[i][j] %></td>
+            <% } %>
+        </tr>
+    <% } %>
+
+</table>
+
+<p><a href="/addStoryPanel">ADDSTORY</a></p>
